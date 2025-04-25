@@ -16,9 +16,9 @@ class LoginTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visit('/login') 
             ->type('email','aqila2@gmail.com') // mengisi kolom email pada form dengan aqila2@gmail.com
-            ->type('password','12345') 
-            ->press('LOG IN')
-            ->assertPathIs('/dashboard')
+            ->type('password','12345')  // mengisi password
+            ->press('LOG IN') // klik tombol login
+            ->assertPathIs('/dashboard') //
             ;
         });
     }
